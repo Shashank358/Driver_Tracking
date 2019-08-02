@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:elevation="40dp"
+        >
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_image"
+                android:layout_width="174dp"
+                android:layout_height="174dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:elevation="10dp"
+                app:cardCornerRadius="87dp">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/settings_image"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/ic_launcher"/>
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:id="@+id/settings_lin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/card_image"
+                android:orientation="vertical">
+
+                <cf.poorcoder.driverapplication.Views.MyTextView
+                    android:id="@+id/settings_name"
+                    style="@style/TextAppearance.AppCompat.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:layout_gravity="center"
+                    android:text="Devashish Thakur"
+                    android:textSize="22sp" />
+
+                <cf.poorcoder.driverapplication.Views.MyTextView
+                    android:id="@+id/settings_phone"
+                    style="@style/TextAppearance.AppCompat.Subhead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/settings_name"
+                    android:layout_marginTop="15dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="8847652546"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+                    <cf.poorcoder.driverapplication.Views.MyTextView
+                        style="@style/TextAppearance.AppCompat.Subhead"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/settings_name"
+                        android:layout_marginTop="15dp"
+                        android:layout_weight="1"
+                        android:text="Fathers Name : "
+                        android:textSize="14sp" />
+                    <cf.poorcoder.driverapplication.Views.MyTextView
+                        android:id="@+id/settings_fathers_name"
+                        style="@style/TextAppearance.AppCompat.Subhead"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/settings_name"
+                        android:layout_marginTop="15dp"
+                        android:layout_weight="1"
+                        android:text="Fathers Name"
+                        android:textSize="14sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+                    <cf.poorcoder.driverapplication.Views.MyTextView
+                        style="@style/TextAppearance.AppCompat.Subhead"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/settings_name"
+                        android:layout_marginTop="15dp"
+                        android:layout_weight="1"
+                        android:text="Mothers Name : "
+                        android:textSize="14sp" />
+                    <cf.poorcoder.driverapplication.Views.MyTextView
+                        android:id="@+id/settings_mothers_name"
+                        style="@style/TextAppearance.AppCompat.Subhead"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/settings_name"
+                        android:layout_marginTop="15dp"
+                        android:layout_weight="1"
+                        android:text="Mothers Name"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <cf.poorcoder.driverapplication.Views.MyTextView
+                    android:id="@+id/settings_address"
+                    style="@style/TextAppearance.AppCompat.Subhead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/settings_name"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:text="Address"
+                    android:textSize="14sp" />
+
+                <cf.poorcoder.driverapplication.Views.MyTextView
+                    android:id="@+id/dob"
+                    style="@style/TextAppearance.AppCompat.Subhead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/settings_name"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1"
+                    android:text="20/20/20"
+                    android:layout_gravity="center"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linearInformation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@id/settings_lin"
+                android:layout_marginTop="15dp"
+                android:weightSum="2">
+                <Button
+                    android:id="@+id/settings_image_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@android:color/white"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    android:text="CHANGE IMAGE"
+                    android:visibility="gone"
+                    android:textColor="@color/colorPrimary" />
+
+                <Button
+                    android:id="@+id/settings_status_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="CHANGE DETAILS"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button"
+                    android:textColor="@android:color/white" />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
